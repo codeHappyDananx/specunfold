@@ -1,0 +1,18 @@
+[
+  {
+    "coordinate": "ch.qos.logback:logback-core:1.2.13",
+    "publishedJavaFiles": 308,
+    "exactJavaMatchesIgnoringLineEndings": 308,
+    "differentJavaFiles": [],
+    "generatedJavaToPreferredGroovySources": {},
+    "generator": null
+  },
+  {
+    "coordinate": "ch.qos.logback:logback-classic:1.2.13",
+    "publishedJavaFiles": 156,
+    "exactJavaMatchesIgnoringLineEndings": 156,
+    "differentJavaFiles": [],
+    "generatedJavaToPreferredGroovySources": {},
+    "generator": null
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "check_artifact": {
+      "runtime": "node",
+      "entry": "runtime/check-artifact.js",
+      "files": ["runtime/check-artifact.js"],
+      "args": [],
+      "timeoutSeconds": 10
+    }
+  }
+}

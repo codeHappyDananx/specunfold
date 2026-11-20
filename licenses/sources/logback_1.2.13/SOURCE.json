@@ -1,0 +1,53 @@
+{
+  "coordinate": "ch.qos.logback:logback-core:1.2.13;ch.qos.logback:logback-classic:1.2.13",
+  "license": "EPL-1.0",
+  "binaries": [
+    {
+      "coordinate": "ch.qos.logback:logback-core:1.2.13",
+      "sha256": "07b1586faf220c05821d0f3ed8e2e417e214c83f40641f76e8a90b134c31ff6b"
+    },
+    {
+      "coordinate": "ch.qos.logback:logback-classic:1.2.13",
+      "sha256": "937afb220b91d8a394d78befdbf587c71aeed289d582e2a91e72a7d92172371d"
+    }
+  ],
+  "upstreamTag": "v_1.2.13",
+  "upstreamCommit": "2648b9e7fbb47426c89b9c93b411c07484e8f277",
+  "unmodified": true,
+  "buildEntry": "pom.xml; logback-core/pom.xml; logback-classic/pom.xml",
+  "files": [
+    {
+      "path": "licenses/sources/logback_1.2.13/DISTRIBUTION.md",
+      "sha256": "c5fc33f11636d7242edc587c05854ef58defe2921d0f2f519037ff81106630b6"
+    },
+    {
+      "path": "licenses/sources/logback_1.2.13/EPL-1.0.html",
+      "sha256": "a40741b59364cc49449255e9b9bfe1fcfe6a2e7ab4d37ca89db3bacbfb14e9d2",
+      "url": "https://www.eclipse.org/legal/epl-v10.html"
+    },
+    {
+      "path": "licenses/sources/logback_1.2.13/LICENSE.txt",
+      "sha256": "94a99c6ee7e8b5ba3ef66a1d234c22a55c149e93584040d66a7f6694d552e7ea",
+      "url": "https://api.github.com/repos/qos-ch/logback/zipball/2648b9e7fbb47426c89b9c93b411c07484e8f277"
+    },
+    {
+      "path": "licenses/sources/logback_1.2.13/logback-classic-1.2.13-sources.jar",
+      "sha256": "821aacfa66729fa6dc458305ef5e091b8390e59b82d7a9e940aba1f3fba90082",
+      "url": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.2.13/logback-classic-1.2.13-sources.jar"
+    },
+    {
+      "path": "licenses/sources/logback_1.2.13/logback-core-1.2.13-sources.jar",
+      "sha256": "4cd2a4cfa015556a306e538e7344e5cc7177bcee56fca4ea00936d2769b48cb0",
+      "url": "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.2.13/logback-core-1.2.13-sources.jar"
+    },
+    {
+      "path": "licenses/sources/logback_1.2.13/logback_1.2.13-source.zip",
+      "sha256": "c5b398cefb1922a5ea240ed73e3f520c6eb1fab53cc3ef85fc43e827f3672600",
+      "url": "https://api.github.com/repos/qos-ch/logback/zipball/2648b9e7fbb47426c89b9c93b411c07484e8f277"
+    },
+    {
+      "path": "licenses/sources/logback_1.2.13/SOURCE-MATCH.json",
+      "sha256": "8149be7cd9c47ecb9c1b37846ffd174efd7ea44b9fd8b8db86a771207bbfb847"
+    }
+  ]
+}

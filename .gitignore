@@ -1,0 +1,6 @@
+**/target/
+.build/
+.specunfold/
+**/node_modules/
+*.log
+**/__pycache__/

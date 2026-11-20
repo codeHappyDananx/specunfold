@@ -1,0 +1,20 @@
+{
+  "workflowResolution": { "defaultWorkflow": "delivery" },
+  "intentRoutes": [
+    { "whenAny": ["delivery", "交付"], "workflow": "delivery" }
+  ],
+  "workflows": {
+    "delivery": {
+      "nodes": {
+        "prepare": {
+          "baseSpec": ["spec/prepare.md"],
+          "conditionalSpec": [
+            { "whenAny": ["review", "复核"], "spec": ["spec/review.md"] }
+          ]
+        },
+        "confirm": { "baseSpec": ["spec/confirm.md"] },
+        "verify": { "baseSpec": ["spec/verify.md"] }
+      }
+    }
+  }
+}

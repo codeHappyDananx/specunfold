@@ -1,0 +1,22 @@
+{
+  "contractVersion": 1,
+  "entryAction": "context",
+  "resumeAction": "context",
+  "workflowEntryAction": "bootstrap",
+  "ordinaryTasksCreateState": false,
+  "workflowEntryRequiresUserAgreement": true,
+  "workflowEntryConfirmation": {
+    "confirmedField": "workflowConfirmedByUser",
+    "sourceField": "workflowConfirmationSource",
+    "allowedSources": ["user_explicit_request", "user_confirmed_proposal"],
+    "resumeUsesStoredConfirmation": true
+  },
+  "reloadAfterCompaction": true,
+  "nodeTypes": ["RUN_NODE", "ASK_USER"],
+  "terminalStates": ["DONE", "BLOCKED"],
+  "currentStateFields": ["goal", "design", "constraints", "context", "acceptance"],
+  "instructionFiles": ["AGENTS.md", "CLAUDE.md"],
+  "routerSkill": ".agents/skills/specunfold-router/SKILL.md",
+  "transport": "stdio",
+  "connection": "MCP Router"
+}

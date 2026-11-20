@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 1,
+  "application": {
+    "path": "mcp-server/target/specunfold.jar",
+    "sha256": "06c59a6d2f2a9af6cdb4a3e1d605c8b6cd2e561290e4c6558a5c373cd695140a"
+  },
+  "dependencies": [
+    {
+      "coordinate": "com.ethlo.time:itu:1.7.0",
+      "jar": "mcp-server/target/lib/itu-1.7.0.jar",
+      "sha256": "55ceb418c9e8138c4fcf62e213c4c814d89e8a84c827d395407cbecba5d791e7",
+      "firstParty": false,
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "distribution": "repo"
+        }
+      ],
+      "pomEvidence": [
+        "licenses/java/com.ethlo.time_itu_1.7.0/poms/com/ethlo/time/itu/1.7.0/itu-1.7.0.pom"
+      ],
+      "packagedLegalFiles": [
+        "licenses/java/com.ethlo.time_itu_1.7.0/THIRD-PARTY.txt"
+      ],
+      "supplementalEvidence": [
+        {
+          "path": "licenses/upstream/com.ethlo.time_itu_1.7.0/LICENSE",
+          "url": "https://api.github.com/repos/ethlo/itu/contents/LICENSE?ref=e8067a7e00452b2ee91fdb3538d21ad11e4167d0",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+        }
+      ],
+      "missingMetadata": false,
+      "missingLegalText": false,
+      "selectedLicense": "Apache-2.0"
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-annotations:2.15.2",
+      "jar": "mcp-server/target/lib/jackson-annotations-2.15.2.jar",
+      "sha256": "04e21f94dcfee4b078fa5a5f53047b785aaba69d19de392f616e7a7fe5d3882f",
+      "firstParty": false,
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "distribution": "repo"
+        }
+      ],
+      "pomEvidence": [
+        "licenses/java/com.fasterxml.jackson.core_jackson-annotations_2.15.2/poms/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.pom"
+      ],
+      "packagedLegalFiles": [
+        "licenses/java/com.fasterxml.jackson.core_jackson-annotations_2.15.2/META-INF/LICENSE",
+        "licenses/java/com.fasterxml.jackson.core_jackson-annotations_2.15.2/META-INF/NOTICE"
+      ],
+      "supplementalEvidence": [],
+      "missingMetadata": false,
+      "missingLegalText": false
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-core:2.15.2",
+      "jar": "mcp-server/target/lib/jackson-core-2.15.2.jar",
+      "sha256": "303c99e82b1faa91a0bae5d8fbeb56f7e2adf9b526a900dd723bf140d62bd4b4",
+      "firstParty": false,
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "distribution": "repo"
+        }
+      ],
+      "pomEvidence": [
+        "licenses/java/com.fasterxml.jackson.core_jackson-core_2.15.2/poms/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.pom"
+      ],
+      "packagedLegalFiles": [
+        "licenses/java/com.fasterxml.jackson.core_jackson-core_2.15.2/META-INF/FastDoubleParser-LICENSE",
+        "licenses/java/com.fasterxml.jackson.core_jackson-core_2.15.2/META-INF/LICENSE",
+        "licenses/java/com.fasterxml.jackson.core_jackson-core_2.15.2/META-INF/NOTICE",
+        "licenses/java/com.fasterxml.jackson.core_jackson-core_2.15.2/META-INF/FastDoubleParser-NOTICE",
+        "licenses/java/com.fasterxml.jackson.core_jackson-core_2.15.2/META-INF/bigint-LICENSE"
+      ],
+      "supplementalEvidence": [
+        {
+          "path": "licenses/upstream/com.fasterxml.jackson.core_jackson-core_2.15.2/FastDoubleParser-MIT-LICENSE",
+          "url": "https://raw.githubusercontent.com/wrandelshofer/FastDoubleParser/522be16e145f43308c43b23094e31d5efcaa580e/LICENSE",
+          "sha256": "5f7260e2124be5a560d2c5ec1824475f76bb02dcb352b7f4848a1d702948007c"
+        }
+      ],
+      "missingMetadata": false,
+      "missingLegalText": false
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-databind:2.15.2",
+      "jar": "mcp-server/target/lib/jackson-databind-2.15.2.jar",
+      "sha256": "0eb2fdad6e40ab8832a78c9b22f58196dd970594e8d3d5a26ead87847c4f3a96",
+      "firstParty": false,
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "distribution": "repo"
+        }
+      ],
+      "pomEvidence": [
+        "licenses/java/com.fasterxml.jackson.core_jackson-databind_2.15.2/poms/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.pom"
+      ],
+      "packagedLegalFiles": [
+        "licenses/java/com.fasterxml.jackson.core_jackson-databind_2.15.2/META-INF/LICENSE",
+        "licenses/java/com.fasterxml.jackson.core_jackson-databind_2.15.2/META-INF/NOTICE"
+      ],
+      "supplementalEvidence": [],
+      "missingMetadata": false,
+      "missingLegalText": false
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.15.2",
+      "jar": "mcp-server/target/lib/jackson-dataformat-yaml-2.15.2.jar",
+      "sha256": "37795cc1e8cb94b18d860dc3abd2e593617ce402149ae45aa89ed8bfb881c851",
+      "firstParty": false,
+      "licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "distribution": "repo"
+        }
+      ],
+      "pomEvidence": [
+        "licenses/java/com.fasterxml.jackson.dataformat_jackson-dataformat-yaml_2.15.2/poms/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.2/jackson-dataformat-yaml-2.15.2.pom",
+        "licenses/java/com.fasterxml.jackson.dataformat_jackson-dataformat-yaml_2.15.2/poms/com/fasterxml/jackson/dataformat/jackson-dataformats-text/2.15.2/jackson-dataformats-text-2.15.2.pom"
+      ],
+      "packagedLegalFiles": [
+        "licenses/java/com.fasterxml.jackson.dataformat_jackson-dataformat-yaml_2.15.2/META-INF/LICENSE",
+        "licenses/java/com.fasterxml.jackson.dataformat_jackson-dataformat-yaml_2.15.2/META-INF/NOTICE"
+      ],
+      "supplementalEvidence": [
+        {
+          "path": "licenses/upstream/com.fasterxml.jackson.dataformat_jackson-dataformat-yaml_2.15.2/LICENSE",
+          "url": "https://api.github.com/repos/FasterXML/jackson-dataformats-text/contents/LICENSE?ref=19554b4e4daf2f400bcba8b30fc44a6d6c40101a",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "missingMetadata": false,
+      "missingLegalText": false,
+      "selectedLicense": "Apache-2.0"
+    },
+    {
+      "coordinate": "com.networknt:json-schema-validator:1.0.87",
+      "jar": "mcp-server/target/lib/json-schema-validator-1.0.87.jar",
+      "sha256": "d2c00a6c4515a4adecbec813c4b994b720782207258d49cb537478edec1ada89",
+      "firstParty": false,
+      "licenses": [
+        {
+          "name": "Apache License Version 2.0",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "distribution": "repo"
+        }
+      ],
+      "pomEvidence": [
+        "licenses/java/com.networknt_json-schema-validator_1.0.87/poms/com/networknt/json-schema-validator/1.0.87/json-schema-validator-1.0.87.pom"
+      ],
+      "packagedLegalFiles": [],
+      "supplementalEvidence": [
+        {
+          "path": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/LICENSE",
+          "url": "https://api.github.com/repos/networknt/json-schema-validator/contents/LICENSE?ref=b634de7c83a2da68957a27f0ea55d08a5133903c",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+        },
+        {
+          "path": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/NOTICE",
+          "url": "https://api.github.com/repos/networknt/json-schema-validator/contents/NOTICE?ref=b634de7c83a2da68957a27f0ea55d08a5133903c",
+          "sha256": "e07548ec1594ee4bf91da37db97e6d331aa05948ec9a7ba2257a065a08e84038"
+        },
+        {
+          "path": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/Unicode-DFS-2016-LICENSE.txt",
+          "url": "https://api.github.com/repos/unicode-org/icu/contents/icu4c/LICENSE?ref=ff3514f257ea10afe7e710e9f946f68d256704b1",
+          "sha256": "b224ef53e5506205cb56f1c037f6337a331e9e47af2e99ae8ca65720f34e07d7",
+          "extraction": "unicode-license"
+        },
+        {
+          "path": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/JSON-Schema-LICENSE.txt",
+          "url": "https://api.github.com/repos/json-schema-org/json-schema-spec/contents/LICENSE?ref=51326f80900357fe3069beb4f5f575db24c1b9a7",
+          "sha256": "909b25a80d4945b21d3adb2fb17f90bf592e0274bdf117c069c088a8e44dc7b6"
+        },
+        {
+          "path": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/JSON-Schema-NOTICE.txt",
+          "url": "https://api.github.com/repos/json-schema-org/json-schema-spec/contents/README.md?ref=51326f80900357fe3069beb4f5f575db24c1b9a7",
+          "sha256": "3fbf8030d6604aa443b024690d64e51b9612f0631510b5471ca5e318815153d5",
+          "extraction": "schema-license"
+        },
+        {
+          "path": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/IETF-TLP-4.pdf",
+          "url": "https://trustee.ietf.org/wp-content/uploads/IETF-TLP-4.pdf",
+          "sha256": "7aa394e8d525ee3815c8b01ce84f4d83de8affe302143a228f8d5101867a3594"
+        },
+        {
+          "path": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/RFC5892-NOTICE.txt",
+          "url": "https://www.rfc-editor.org/rfc/rfc5892.txt",
+          "sha256": "1139ce57dc6f5ac7be5e521a81f665de4f1343aee8b48ac8fdef6adfc0b78bce",
+          "extraction": "rfc-notice"
+        },
+        {
+          "path": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/IETF-Code-Components-BSD-LICENSE.txt",
+          "sha256": "f713b26fdb4bdfbd6bddd2dbd66e91f10e30df179da4ac02d9d89c47995e9c63",
+          "url": "https://trustee.ietf.org/wp-content/uploads/IETF-TLP-4.pdf",
+          "extraction": "Section 4.c BSD license with the RFC 5892 year and author attribution"
+        }
+      ],
+      "missingMetadata": false,
+      "missingLegalText": false,
+      "selectedLicense": "Apache-2.0",
+      "embeddedComponents": [
+        {
+          "name": "Apache Commons Validator routines",
+          "selectedLicense": "Apache-2.0",
+          "notice": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/NOTICE"
+        },
+        {
+          "name": "Unicode 15.0.0 DerivedJoiningType data",
+          "selectedLicense": "Unicode-DFS-2016",
+          "notice": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/Unicode-DFS-2016-LICENSE.txt"
+        },
+        {
+          "name": "JSON Schema draft meta-schemas",
+          "availableLicenseAlternatives": [
+            "BSD-3-Clause",
+            "AFL-3.0"
+          ],
+          "selectedLicense": "BSD-3-Clause",
+          "notice": "licenses/upstream/com.networknt_json-schema-validator_1.0.87/JSON-Schema-LICENSE.txt"
+        },
+        {
+          "name": "RFC 5892 Appendix B code point data",
+          "selectedLicense": "IETF-TLP-4 Code Components BSD license",
+          "notices": [
+            "licenses/upstream/com.networknt_json-schema-validator_1.0.87/IETF-TLP-4.pdf",
+            "licenses/upstream/com.networknt_json-schema-validator_1.0.87/RFC5892-NOTICE.txt",
+            "licenses/upstream/com.networknt_json-schema-validator_1.0.87/IETF-Code-Components-BSD-LICENSE.txt"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": "ch.qos.logback:logback-classic:1.2.13",
+      "jar": "mcp-server/target/lib/logback-classic-1.2.13.jar",
+      "sha256": "937afb220b91d8a394d78befdbf587c71aeed289d582e2a91e72a7d92172371d",
+      "firstParty": false,
+      "licenses": [
+        {
+          "name": "Eclipse Public License - v 1.0",
+          "url": "http://www.eclipse.org/legal/epl-v10.html"
+        },
+        {
+          "name": "GNU Lesser General Public License",
+          "url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"
+        }
+      ],
+      "pomEvidence": [
+        "licenses/java/ch.qos.logback_logback-classic_1.2.13/poms/ch/qos/logback/logback-classic/1.2.13/logback-classic-1.2.13.pom",
+        "licenses/java/ch.qos.logback_logback-classic_1.2.13/poms/ch/qos/logback/logback-parent/1.2.13/logback-parent-1.2.13.pom"
+      ],
+      "packagedLegalFiles": [],
+      "supplementalEvidence": [
+        {
+          "path": "licenses/upstream/ch.qos.logback_logback-classic_1.2.13/LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/qos-ch/logback/v_1.2.13/LICENSE.txt",
+          "sha256": "94a99c6ee7e8b5ba3ef66a1d234c22a55c149e93584040d66a7f6694d552e7ea"
+        },
+        {
+          "path": "licenses/upstream/ch.qos.logback_logback-classic_1.2.13/LGPL-2.1.txt",
+          "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt",
+          "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+        },
+        {
+          "path": "licenses/upstream/ch.qos.logback_logback-classic_1.2.13/EPL-1.0.html",
+          "url": "https://www.eclipse.org/legal/epl-v10.html",
+          "sha256": "a40741b59364cc49449255e9b9bfe1fcfe6a2e7ab4d37ca89db3bacbfb14e9d2"
+        }
+      ],
+      "missingMetadata": false,
+      "missingLegalText": false
+    },
+    {
+      "coordinate": "ch.qos.logback:logback-core:1.2.13",
+      "jar": "mcp-server/target/lib/logback-core-1.2.13.jar",
+      "sha256": "07b1586faf220c05821d0f3ed8e2e417e214c83f40641f76e8a90b134c31ff6b",
+      "firstParty": false,
+      "licenses": [
+        {
+          "name": "Eclipse Public License - v 1.0",
+          "url": "http://www.eclipse.org/legal/epl-v10.html"
+        },
+        {
+          "name": "GNU Lesser General Public License",
+          "url": "http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"
+        }
+      ],
+      "pomEvidence": [
+        "licenses/java/ch.qos.logback_logback-core_1.2.13/poms/ch/qos/logback/logback-core/1.2.13/logback-core-1.2.13.pom",
+        "licenses/java/ch.qos.logback_logback-core_1.2.13/poms/ch/qos/logback/logback-parent/1.2.13/logback-parent-1.2.13.pom"
+      ],
+      "packagedLegalFiles": [],
+      "supplementalEvidence": [
+        {
+          "path": "licenses/upstream/ch.qos.logback_logback-core_1.2.13/LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/qos-ch/logback/v_1.2.13/LICENSE.txt",
+          "sha256": "94a99c6ee7e8b5ba3ef66a1d234c22a55c149e93584040d66a7f6694d552e7ea"
+        },
+        {
+          "path": "licenses/upstream/ch.qos.logback_logback-core_1.2.13/LGPL-2.1.txt",
+          "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt",
+          "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+        },
+        {
+          "path": "licenses/upstream/ch.qos.logback_logback-core_1.2.13/EPL-1.0.html",
+          "url": "https://www.eclipse.org/legal/epl-v10.html",
+          "sha256": "a40741b59364cc49449255e9b9bfe1fcfe6a2e7ab4d37ca89db3bacbfb14e9d2"
+        }
+      ],
+      "missingMetadata": false,
+      "missingLegalText": false
+    },
+    {
+      "coordinate": "org.slf4j:slf4j-api:1.7.36",
+      "jar": "mcp-server/target/lib/slf4j-api-1.7.36.jar",
+      "sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0",
+      "firstParty": false,
+      "licenses": [
+        {
+          "name": "MIT License",
+          "url": "http://www.opensource.org/licenses/mit-license.php",
+          "distribution": "repo"
+        }
+      ],
+      "pomEvidence": [
+        "licenses/java/org.slf4j_slf4j-api_1.7.36/poms/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom",
+        "licenses/java/org.slf4j_slf4j-api_1.7.36/poms/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom"
+      ],
+      "packagedLegalFiles": [],
+      "supplementalEvidence": [
+        {
+          "path": "licenses/upstream/org.slf4j_slf4j-api_1.7.36/LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/qos-ch/slf4j/v_1.7.36/LICENSE.txt",
+          "sha256": "6fbe2eaf44b193b8a40eed9208f52848572224ad8d7672dd09418aa174847e73"
+        }
+      ],
+      "missingMetadata": false,
+      "missingLegalText": false
+    },
+    {
+      "coordinate": "org.yaml:snakeyaml:2.0",
+      "jar": "mcp-server/target/lib/snakeyaml-2.0.jar",
+      "sha256": "880c9d896e4b74a06c549c15ca496450165d6909fa15d7e662bee8f6a66d7afa",
+      "firstParty": false,
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt",
+          "distribution": "repo"
+        }
+      ],
+      "pomEvidence": [
+        "licenses/java/org.yaml_snakeyaml_2.0/poms/org/yaml/snakeyaml/2.0/snakeyaml-2.0.pom"
+      ],
+      "packagedLegalFiles": [],
+      "supplementalEvidence": [
+        {
+          "path": "licenses/upstream/org.yaml_snakeyaml_2.0/LICENSE.txt",
+          "url": "https://api.bitbucket.org/2.0/repositories/snakeyaml/snakeyaml/src/59ddbb3304bb8e22e2004d74cddaf9ed4086632e/LICENSE.txt",
+          "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+        },
+        {
+          "path": "licenses/upstream/org.yaml_snakeyaml_2.0/Base64Coder-NOTICE.txt",
+          "url": "https://api.bitbucket.org/2.0/repositories/snakeyaml/snakeyaml/src/59ddbb3304bb8e22e2004d74cddaf9ed4086632e/src/main/java/org/yaml/snakeyaml/external/biz/base64Coder/Base64Coder.java",
+          "sha256": "5e415fdb6e006ab87f6d8d6e3d743dc79a4515e8f7b9279a61d3f56165fc7e5b",
+          "extraction": "Original leading copyright and license header, before the package declaration"
+        },
+        {
+          "path": "licenses/upstream/org.yaml_snakeyaml_2.0/Escaper-NOTICE.txt",
+          "url": "https://api.bitbucket.org/2.0/repositories/snakeyaml/snakeyaml/src/59ddbb3304bb8e22e2004d74cddaf9ed4086632e/src/main/java/org/yaml/snakeyaml/external/com/google/gdata/util/common/base/Escaper.java",
+          "sha256": "126fc2ba8825dea8bc4e4b0c316a7d658e8565270ffa512cacacce7e1d3dc342",
+          "extraction": "Original leading copyright and license header, before the package declaration"
+        },
+        {
+          "path": "licenses/upstream/org.yaml_snakeyaml_2.0/PercentEscaper-NOTICE.txt",
+          "url": "https://api.bitbucket.org/2.0/repositories/snakeyaml/snakeyaml/src/59ddbb3304bb8e22e2004d74cddaf9ed4086632e/src/main/java/org/yaml/snakeyaml/external/com/google/gdata/util/common/base/PercentEscaper.java",
+          "sha256": "126fc2ba8825dea8bc4e4b0c316a7d658e8565270ffa512cacacce7e1d3dc342",
+          "extraction": "Original leading copyright and license header, before the package declaration"
+        },
+        {
+          "path": "licenses/upstream/org.yaml_snakeyaml_2.0/UnicodeEscaper-NOTICE.txt",
+          "url": "https://api.bitbucket.org/2.0/repositories/snakeyaml/snakeyaml/src/59ddbb3304bb8e22e2004d74cddaf9ed4086632e/src/main/java/org/yaml/snakeyaml/external/com/google/gdata/util/common/base/UnicodeEscaper.java",
+          "sha256": "126fc2ba8825dea8bc4e4b0c316a7d658e8565270ffa512cacacce7e1d3dc342",
+          "extraction": "Original leading copyright and license header, before the package declaration"
+        }
+      ],
+      "missingMetadata": false,
+      "missingLegalText": false,
+      "selectedLicense": "Apache-2.0",
+      "embeddedComponents": [
+        {
+          "name": "Base64Coder",
+          "availableLicenseAlternatives": [
+            "EPL-1.0-or-later",
+            "LGPL-2.1-or-later",
+            "GPL-2.0-or-later",
+            "Apache-2.0-or-later",
+            "BSD"
+          ],
+          "selectedLicense": "Apache-2.0",
+          "notice": "licenses/upstream/org.yaml_snakeyaml_2.0/Base64Coder-NOTICE.txt"
+        },
+        {
+          "name": "Google GData Escaper, PercentEscaper and UnicodeEscaper",
+          "selectedLicense": "Apache-2.0",
+          "notices": [
+            "licenses/upstream/org.yaml_snakeyaml_2.0/Escaper-NOTICE.txt",
+            "licenses/upstream/org.yaml_snakeyaml_2.0/PercentEscaper-NOTICE.txt",
+            "licenses/upstream/org.yaml_snakeyaml_2.0/UnicodeEscaper-NOTICE.txt"
+          ]
+        }
+      ]
+    },
+    {
+      "coordinate": "dev.specunfold:workflow-core:1.0.0",
+      "jar": "mcp-server/target/lib/workflow-core-1.0.0.jar",
+      "sha256": "fbf72df07c30695387022120390405a774996ec1e65f7cc503eff0fe3a715ad5",
+      "firstParty": true,
+      "licenses": [],
+      "pomEvidence": [],
+      "packagedLegalFiles": [],
+      "supplementalEvidence": [],
+      "missingMetadata": false,
+      "missingLegalText": false
+    }
+  ]
+}

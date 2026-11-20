@@ -1,0 +1,42 @@
+{
+  "id": "delivery",
+  "title": "Example delivery",
+  "nodes": [
+    {
+      "id": "prepare",
+      "type": "RUN_NODE",
+      "title": "Prepare a delivery note",
+      "objective": "Read the current specification and create a small workspace artifact.",
+      "prompt": "Read the referenced specification on demand. Write delivery.txt in the workspace, then submit facts.prepared=true, a nonempty evidence object describing the preparation, and the artifact path.",
+      "requiredFacts": ["facts.prepared"],
+      "factAssertions": [{ "path": "facts.prepared", "operator": "equals", "value": true }],
+      "expectedArtifacts": ["delivery.txt"],
+      "completionGates": [{ "type": "artifact", "path": "delivery.txt" }]
+    },
+    {
+      "id": "confirm",
+      "type": "ASK_USER",
+      "title": "Ask for user confirmation",
+      "objective": "Let the user approve the prepared artifact before verification.",
+      "prompt": "Show delivery.txt to the user and ask for approval. Submit decision.approved only after receiving the user's answer.",
+      "requiredFacts": [],
+      "factAssertions": [],
+      "expectedArtifacts": [],
+      "completionGates": []
+    },
+    {
+      "id": "verify",
+      "type": "RUN_NODE",
+      "title": "Verify the delivery",
+      "objective": "Check the approved artifact and record the verification evidence.",
+      "prompt": "Read the verification specification. Run check_artifact with artifactPath=delivery.txt, inspect its result, and submit facts.verified=true with evidence.note describing the check.",
+      "requiredFacts": ["facts.verified"],
+      "factAssertions": [{ "path": "facts.verified", "operator": "equals", "value": true }],
+      "expectedArtifacts": ["delivery.txt"],
+      "completionGates": [
+        { "type": "artifact", "path": "delivery.txt" },
+        { "type": "evidence", "path": "evidence.note", "operator": "notEmpty" }
+      ]
+    }
+  ]
+}

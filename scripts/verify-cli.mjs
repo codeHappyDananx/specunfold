@@ -1,0 +1,76 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
+
+const home = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'specunfold-cli-'));
+const workspace = path.join(temporary, 'workspace');
+const invoke = (...args) => spawnSync(process.execPath, [path.join(home, 'bin/specunfold.js'), ...args], { encoding: 'utf8' });
+try {
+  fs.mkdirSync(workspace, { recursive: true });
+  fs.writeFileSync(path.join(workspace, 'AGENTS.md'), '# Project rules\nKeep these instructions.\n');
+  fs.writeFileSync(path.join(workspace, 'CLAUDE.md'), '# Claude project rules\n');
+  const args = ['install', '--workspace', workspace, '--profile', 'example'];
+  const initial = invoke(...args);
+  assert.equal(initial.status, 0, initial.stderr);
+  const repeated = invoke(...args);
+  assert.equal(repeated.status, 0, repeated.stderr);
+  assert.match(repeated.stdout, /\(0 files copied\)/);
+  const instructionsPath = path.join(workspace, 'AGENTS.md');
+  const instructions = fs.readFileSync(instructionsPath, 'utf8');
+  assert.ok(instructions.startsWith('# Project rules\nKeep these instructions.\n'));
+  assert.equal(instructions.match(/<!-- SPECUNFOLD:BEGIN -->/g).length, 1);
+  assert.match(instructions, /action:"context"/);
+  assert.match(fs.readFileSync(path.join(workspace, 'CLAUDE.md'), 'utf8'), /^# Claude project rules\n/);
+  const manifest = JSON.parse(fs.readFileSync(path.join(workspace, '.agents/harness/manifest.json'), 'utf8'));
+  assert.equal(manifest.defaultProfile, 'example');
+  assert.equal(manifest.framework, 'specunfold');
+  assert.equal(manifest.contractVersion, 1);
+  assert.ok(fs.existsSync(path.join(workspace, '.agents/harness/constitution.md')));
+  assert.ok(fs.existsSync(path.join(workspace, '.agents/harness/runtime-contract.json')));
+  assert.ok(fs.existsSync(path.join(workspace, '.agents/skills/specunfold-router/SKILL.md')));
+  fs.appendFileSync(instructionsPath, '\nLocal rules after the managed block.\n');
+  assert.equal(invoke(...args).status, 0);
+  assert.ok(fs.readFileSync(instructionsPath, 'utf8').endsWith('\nLocal rules after the managed block.\n'));
+  const another = invoke('install', '--workspace', workspace, '--profile', 'another',
+    '--profile-dir', path.join(home, 'resources/profiles/example'));
+  assert.equal(another.status, 0, another.stderr);
+  assert.equal(JSON.parse(fs.readFileSync(path.join(workspace, '.agents/harness/manifest.json'), 'utf8')).defaultProfile, 'example');
+  const installed = path.join(workspace, '.agents/profiles/example');
+  const edited = path.join(installed, 'spec/prepare.md');
+  const absent = path.join(installed, 'spec/verify.md');
+  fs.writeFileSync(edited, 'Local user edit\n');
+  fs.unlinkSync(absent);
+  const conflict = invoke(...args);
+  assert.equal(conflict.status, 1);
+  assert.match(conflict.stderr, /existing file differs/);
+  assert.equal(fs.readFileSync(edited, 'utf8'), 'Local user edit\n');
+  assert.equal(fs.existsSync(absent), false, 'Conflict must be detected before copying any files');
+  assert.equal(invoke('install', '--workspace', workspace, '--profile', '../escape').status, 1);
+  const external = invoke('install', '--workspace', path.join(temporary, 'custom'), '--profile', 'custom',
+    '--profile-dir', path.join(home, 'resources/profiles/example'));
+  assert.equal(external.status, 0, external.stderr);
+  assert.equal(JSON.parse(fs.readFileSync(path.join(temporary, 'custom/.agents/harness/manifest.json'), 'utf8')).defaultProfile, 'custom');
+  const broken = path.join(temporary, 'broken');
+  fs.mkdirSync(broken);
+  fs.writeFileSync(path.join(broken, 'AGENTS.md'), '# Local rules\n<!-- SPECUNFOLD:BEGIN -->\n');
+  const malformed = invoke('install', '--workspace', broken, '--profile', 'example');
+  assert.equal(malformed.status, 1);
+  assert.match(malformed.stderr, /malformed managed instruction block/);
+  assert.equal(fs.existsSync(path.join(broken, '.agents')), false, 'Malformed instructions must block the entire install');
+  const harnessConflict = path.join(temporary, 'harness-conflict');
+  const harnessFile = path.join(harnessConflict, '.agents/harness/constitution.md');
+  fs.mkdirSync(path.dirname(harnessFile), { recursive: true });
+  fs.writeFileSync(harnessFile, 'Local Harness edit\n');
+  const rejected = invoke('install', '--workspace', harnessConflict, '--profile', 'example');
+  assert.equal(rejected.status, 1);
+  assert.match(rejected.stderr, /existing file differs/);
+  assert.equal(fs.existsSync(path.join(harnessConflict, '.agents/profiles')), false, 'Harness conflict must block Profile copying');
+  assert.equal(fs.readFileSync(harnessFile, 'utf8'), 'Local Harness edit\n');
+  console.log('PASS Profile and Harness install, repeat install, managed instructions, preserved local rules, default Profile, conflict protection and external Profile');
+} finally {
+  fs.rmSync(temporary, { recursive: true, force: true });
+}
