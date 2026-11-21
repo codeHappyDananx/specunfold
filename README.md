@@ -4,6 +4,24 @@ SpecUnfold 是独立的规范与工作流框架。它按当前节点返回规范
 
 调用链：工作区探测 → 规范地图 → 当前节点引用 → 按需读取正文 → 提交事实与产物 → 门禁校验 → 继续或结束。
 
+## Windows 安装包
+
+面向使用者的 Windows x64 安装包包含精简 Java 运行环境和 Node.js，无须另外安装开发工具。
+安装时可选择软件目录；安装后打开 SpecUnfold，选择代码项目目录，点击安装示例规范并复制助手连接配置。
+软件安装与项目规范安装分开执行，不自动改写助手的全局配置。完整使用说明见 `scripts/windows/USER-GUIDE.md`。
+
+维护者在 Windows x64、JDK 21 或更新版本以及 Python 3 环境中执行：
+
+```powershell
+./scripts/package-windows.ps1 -JavaHome 'C:/path/to/jdk'
+```
+
+脚本将校验后下载的 Maven、WiX 3.14.1 和 Node.js 放在 `.build/tools`，
+构建并运行测试、更新实际依赖授权记录，再使用 `jlink` 和 `jpackage` 打包。
+输出为 `dist/SpecUnfold-1.0.0.exe` 及校验清单，便携运行目录位于 `.build/windows/images/SpecUnfold`。
+需要 MSI 格式时使用 `-InstallerType msi`。运行环境和构建工具随版本维护，不依赖用户的全局环境配置。
+当前仅提供 Windows x64 安装，不包含代码签名或自动更新。
+
 ## 构建与启动
 
 需要 JDK 8 或以上、Maven，以及支持 `node:` 标准模块的 Node.js。CLI 和示例脚本不需要 npm 安装。

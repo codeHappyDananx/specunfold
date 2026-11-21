@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "application": {
     "path": "mcp-server/target/specunfold.jar",
-    "sha256": "06c59a6d2f2a9af6cdb4a3e1d605c8b6cd2e561290e4c6558a5c373cd695140a"
+    "sha256": "c33fd951177dd07eb4bff0c13f899639b1515c548e10bfd7f32407191dea0c79"
   },
   "dependencies": [
     {
@@ -423,7 +423,7 @@
     {
       "coordinate": "dev.specunfold:workflow-core:1.0.0",
       "jar": "mcp-server/target/lib/workflow-core-1.0.0.jar",
-      "sha256": "fbf72df07c30695387022120390405a774996ec1e65f7cc503eff0fe3a715ad5",
+      "sha256": "8169fbc48cddbc97b3e727ae6adb10ed016c510bc8f6d6d45c5ecc94c81ead3b",
       "firstParty": true,
       "licenses": [],
       "pomEvidence": [],
